@@ -1,4 +1,4 @@
-pos
+pos-oop
 ===
 
-my first JavaScript homework, about a pos
+my second JavaScript homework, about a pos in oop
