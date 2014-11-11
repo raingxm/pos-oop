@@ -29,7 +29,7 @@ ShoppingCart.prototype.currentDate = function() {
       second = dateDigitToString(currentDate.getSeconds()),
       formattedDateString = year + '年' + month +
       '月' + date + '日 ' + hour + ':' + minute + ':' + second;
-  return formattedDateString;  
+  return formattedDateString;
 };
 
 ShoppingCart.prototype.itemLinesInfo = function() {
@@ -59,9 +59,9 @@ ShoppingCart.prototype.totalInfo = function() {
           "节省：" + savingPrice.toFixed(2) + "(元)\n";
 };
 
-ShoppingCart.prototype.initCart = function() {
+ShoppingCart.prototype.initCart = function(items) {
   var itemsCountMap = this.getItemsCountMapFromInput();
-  var items = loadAllItems();
+  items = items || loadAllItems();
   for(var i = 0; i < items.length; i++) {
     if(itemsCountMap.hasOwnProperty(items[i].barcode)) {
       var amount = itemsCountMap[items[i].barcode];
